@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+$loader = require_once __DIR__.'/../vendor/autoload.php';
+$container = require_once __DIR__.'/../services.php';
+
+use Phlexget\Console\Application;
+
+$application = new Application($container);
+$application->run();

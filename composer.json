@@ -1,0 +1,35 @@
+{
+    "name":        "phlexget/phlexget",
+    "description": "A Flexget-like application built in PHP in top of Symfony2 Components",
+    "keywords":    ["flexget","torrent","rss","transmission","rpi","raspberry","xbmc"],
+    "homepage":    "http://phlexget.adanlobato.com",
+    "license":     "MIT",
+    "autoload":{
+        "psr-0":{ "Phlexget": "src/" }
+    },
+    "authors":[
+        { "name":  "Adán Lobato", "email": "adan.lobato@gmail.com" }
+    ],
+    "require":{
+        "php":             ">=5.3.3",
+        "symfony/console": "~2.2.0",
+        "symfony/process": "~2.2.0",
+        "symfony/finder":  "~2.2.0",
+        "symfony/yaml":    "~2.2.0",
+        "symfony/config":  "~2.2.0",
+        "symfony/event-dispatcher": "~2.2.0",
+        "pimple/pimple":   "1.0.*",
+        "doctrine/cache":  "1.0.*",
+        "react/async": "~1.0",
+        "react/event-loop": "0.2.*",
+        "kriswallsmith/buzz": "~0.9",
+        "kriswallsmith/spork": "dev-master",
+        "simplepie/simplepie": "~1.3.1"
+    },
+    "require-dev":{
+        "phpunit/phpunit":   "3.7.*"
+    },
+    "extra":{
+        "branch-alias": { "dev-master": "1.0-dev" }
+    }
+}
