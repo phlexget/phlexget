@@ -1,6 +1,40 @@
 {
-    "hash": "790dcbef6f57199b71b5adf47774e78f",
+    "hash": "df414caa8b3161257cb963bc525623bd",
     "packages": [
+        {
+            "name": "adanlobato/transmission",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adanlobato/Transmission.git",
+                "reference": "4eed4fd97bbfac9b4fe8f225e1f0c6ff4d09197c"
+            },
+            "require": {
+                "kriswallsmith/buzz": "0.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "adanlobato\\Transmission": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adán Lobato",
+                    "email": "adan.lobato@gmail.com"
+                }
+            ],
+            "description": "Transmission RPC client written in PHP",
+            "time": "2013-03-21 08:01:22"
+        },
         {
             "name": "doctrine/cache",
             "version": "v1.0",
@@ -50,7 +84,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -111,45 +145,76 @@
             "time": "2013-02-19 00:26:38"
         },
         {
-            "name": "kriswallsmith/spork",
+            "name": "phlexget/rss-plugin",
             "version": "dev-master",
+            "target-dir": "Phlexget/RssPlugin",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kriswallsmith/spork.git",
-                "reference": "be8999765e04b35e01fefec6f136a906086a3a5d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/spork/zipball/be8999765e04b35e01fefec6f136a906086a3a5d",
-                "reference": "be8999765e04b35e01fefec6f136a906086a3a5d",
-                "shasum": ""
+                "url": "https://github.com/phlexget/rss-plugin.git",
+                "reference": "4595566b5add786a6b8d6a17af5d4d680682d92d"
             },
             "require": {
-                "ext-pcntl": "*",
-                "ext-posix": "*",
-                "php": ">=5.3.0",
-                "symfony/event-dispatcher": "*"
+                "phlexget/phlexget": "1.0.*@dev",
+                "simplepie/simplepie": "~1.3.1"
             },
             "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Spork": "src/"
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload": {
+                "psr-0": {
+                    "Phlexget\\RssPlugin": ""
+                }
+            },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Kris Wallsmith",
-                    "email": "kris.wallsmith@gmail.com",
-                    "homepage": "http://kriswallsmith.net/"
+                    "name": "Adán Lobato",
+                    "email": "adan.lobato@gmail.com"
                 }
             ],
-            "description": "Asynchronous PHP",
-            "homepage": "https://github.com/kriswallsmith/spork",
-            "time": "2013-01-29 14:45:21"
+            "description": "Adds torrent RSS parsing capabilities to Phlexget.",
+            "time": "2013-03-22 17:29:34"
+        },
+        {
+            "name": "phlexget/transmission-plugin",
+            "version": "dev-master",
+            "target-dir": "Phlexget/TransmissionPlugin",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phlexget/transmission-plugin.git",
+                "reference": "aca729964dd70a14a29f36a28863879ab80d98a0"
+            },
+            "require": {
+                "adanlobato/transmission": "1.0.*@dev",
+                "phlexget/phlexget": "1.0.*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Phlexget\\TransmissionPlugin": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adán Lobato",
+                    "email": "adan.lobato@gmail.com"
+                }
+            ],
+            "description": "Add torrents to Transmission directly from Phlexget.",
+            "time": "2013-03-22 17:20:05"
         },
         {
             "name": "pimple/pimple",
@@ -196,90 +261,6 @@
                 "dependency injection"
             ],
             "time": "2013-03-08 08:21:40"
-        },
-        {
-            "name": "react/async",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/async",
-                "reference": "v1.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/async/zipball/v1.0.0",
-                "reference": "v1.0.0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "react/event-loop": "0.2.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "React\\Async": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Async utilities for React.",
-            "keywords": [
-                "async"
-            ],
-            "time": "2013-02-06 23:27:19"
-        },
-        {
-            "name": "react/event-loop",
-            "version": "v0.2.7",
-            "target-dir": "React/EventLoop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/event-loop",
-                "reference": "v0.2.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/reactphp/event-loop/archive/v0.2.7.zip",
-                "reference": "v0.2.7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-libev": "*",
-                "ext-libevent": ">=0.0.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "React\\EventLoop": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Event loop abstraction layer that libraries can use for evented I/O.",
-            "keywords": [
-                "event-loop"
-            ],
-            "time": "2013-01-05 11:41:26"
         },
         {
             "name": "simplepie/simplepie",
@@ -986,7 +967,9 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kriswallsmith/spork": 20
+        "phlexget/rss-plugin": 20,
+        "phlexget/transmission-plugin": 20,
+        "adanlobato/transmission": 20
     },
     "platform": {
         "php": ">=5.3.3"
